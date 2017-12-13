@@ -69,7 +69,7 @@ namespace creditCounter
         }
         private void Form1_Load(object sender, System.EventArgs e)
         {
-          
+
         }
         private void btn_TwentyPence_Click(object sender, EventArgs e)
         {
@@ -102,4 +102,3 @@ namespace creditCounter
         }
     }
 }
-

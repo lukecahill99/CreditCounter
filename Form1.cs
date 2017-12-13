@@ -76,5 +76,30 @@ namespace creditCounter
             twentyCount = twentyCount + 1;
             TwentyPenceCount.Text = Convert.ToString(twentyCount);
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            CostPerCredit.Text = "";
+            CurrentCredits.Text = "";
+            TotalValuePence.Text = "";
+            TotalValuePound.Text = "";
+            OnePenceCount.Text = "";
+            oneCount = 0;
+            TwoPenceCount.Text = "";
+            twoCount = 0;
+            FivePenceCount.Text = "";
+            fiveCount = 0;
+            TenPenceCount.Text = "";
+            tenCount = 0;
+            TwentyPenceCount.Text = "";
+            twentyCount = 0;
+            FiftyPenceCount.Text = "";
+            fiftyCount = 0;
+            OneHundredPenceCount.Text = "";
+            oneHundredCount = 0;
+            TwoHundredPenceCount.Text = "";
+            twoHundredCount = 0;
+        }
     }
 }
+

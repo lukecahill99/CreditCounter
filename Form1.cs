@@ -25,47 +25,84 @@ namespace creditCounter
         int fiftyCount;
         int oneHundredCount;
         int twoHundredCount;
+        int creditCost;
 
         private void btn_OnePence_Click(object sender, EventArgs e)
         {
-            oneCount = oneCount + 1;
-            OnePenceCount.Text = Convert.ToString(oneCount);
+            creditCost = Convert.ToInt32(CostPerCredit.Text);
+            if (creditCost <= 0)
+            {
+                MessageBox.Show("You have not set the cost of the Credit!");
+            }
+            else
+                oneCount = oneCount + 1;
+                OnePenceCount.Text = Convert.ToString(oneCount);
         }
 
         private void btn_TwoPence_Click(object sender, EventArgs e)
         {
-            twoCount = twoCount + 1;
-            TwoPenceCount.Text = Convert.ToString(twoCount);
+            if (creditCost <= 0)
+            {
+                MessageBox.Show("You have not set the cost of the Credit!");
+            }
+            else
+                twoCount = twoCount + 1;
+                TwoPenceCount.Text = Convert.ToString(twoCount);
         }
 
         private void btn_FivePence_Click(object sender, EventArgs e)
         {
-            fiveCount = fiveCount + 1;
-            FivePenceCount.Text = Convert.ToString(fiveCount);
+            if (creditCost <= 0)
+            {
+                MessageBox.Show("You have not set the cost of the Credit!");
+            }
+            else
+                fiveCount = fiveCount + 1;
+                FivePenceCount.Text = Convert.ToString(fiveCount);
         }
 
         private void btn_TenPence_Click(object sender, EventArgs e)
         {
-            tenCount = tenCount + 1;
-            TenPenceCount.Text = Convert.ToString(tenCount);
+            if (creditCost <= 0)
+            {
+                MessageBox.Show("You have not set the cost of the Credit!");
+            }
+            else
+                tenCount = tenCount + 1;
+                TenPenceCount.Text = Convert.ToString(tenCount);
         }
 
         private void btn_FiftyPence_Click(object sender, EventArgs e)
         {
-            fiftyCount = fiftyCount + 1;
-            FiftyPenceCount.Text = Convert.ToString(fiftyCount);
+            if (creditCost <= 0)
+            {
+                MessageBox.Show("You have not set the cost of the Credit!");
+            }
+            else
+                fiftyCount = fiftyCount + 1;
+                FiftyPenceCount.Text = Convert.ToString(fiftyCount);
         }
 
         private void btn_OneHundredPence_Click(object sender, EventArgs e)
         {
-            oneHundredCount = oneHundredCount + 1;
-            OneHundredPenceCount.Text = Convert.ToString(oneHundredCount);
+            if (creditCost <= 0)
+            {
+                MessageBox.Show("You have not set the cost of the Credit!"); 
+            }
+            else
+                oneHundredCount = oneHundredCount + 1;
+                OneHundredPenceCount.Text = Convert.ToString(oneHundredCount);
         }
 
         private void btn_TwoHundredPence_Click(object sender, EventArgs e)
         {
-            twoHundredCount = twoHundredCount + 1;
-            TwoHundredPenceCount.Text = Convert.ToString(twoHundredCount);
+            if (creditCost <= 0)
+            {
+                MessageBox.Show("You have not set the cost of the Credit!");
+            }
+            else
+                twoHundredCount = twoHundredCount + 1;
+                TwoHundredPenceCount.Text = Convert.ToString(twoHundredCount);
         }
         private void Form1_Load(object sender, System.EventArgs e)
         {
@@ -73,16 +110,21 @@ namespace creditCounter
         }
         private void btn_TwentyPence_Click(object sender, EventArgs e)
         {
-            twentyCount = twentyCount + 1;
-            TwentyPenceCount.Text = Convert.ToString(twentyCount);
+            if (creditCost <= 0)
+            { 
+                MessageBox.Show("You have not set the cost of the Credit!");
+            }
+            else
+               twentyCount = twentyCount + 1;
+                TwentyPenceCount.Text = Convert.ToString(twentyCount);
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            CostPerCredit.Text = "";
-            CurrentCredits.Text = "";
-            TotalValuePence.Text = "";
-            TotalValuePound.Text = "";
+            CostPerCredit.Text = "0";
+            CurrentCredits.Text = "0";
+            TotalValuePence.Text = "0";
+            TotalValuePound.Text = "0.00";
             OnePenceCount.Text = "";
             oneCount = 0;
             TwoPenceCount.Text = "";
